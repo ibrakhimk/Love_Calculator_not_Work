@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.lovecalculator'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.lovecalculator"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_19
+        targetCompatibility JavaVersion.VERSION_19
+    }
+    kotlinOptions {
+        jvmTarget = '19'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.8.1'
+
+    //nav
+    def nav_version = "2.5.3"
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    //Navigation Component
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //ViewBinding
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.9'
+
+    def fragment_version = "1.5.7"
+    // Kotlin
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
+    //Dagger - Hilt
+    //Hilt
+    implementation 'com.google.dagger:hilt-android:2.45'
+    kapt 'com.google.dagger:hilt-compiler:2.45'
+}

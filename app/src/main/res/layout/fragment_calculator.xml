@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.calculator.CalculatorFragment">
+
+
+
+    <ImageView
+        android:src="@drawable/serdce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_margin="24dp"
+        android:textStyle="bold"
+        android:textColor="#717afa"
+        android:textSize="32dp"
+        android:text="@string/love_calculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_margin="24dp"
+        android:textSize="24dp"
+        android:text="First Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_ferst"
+        android:hint="Me"
+        android:padding="10dp"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_margin="24dp"
+        android:textSize="24dp"
+        android:text="Second Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_second"
+        android:hint="You"
+        android:background="@drawable/edit_text"
+        android:padding="10dp"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_result"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Calculator"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+</LinearLayout>
